@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lothaire — Portfolio BTS SIO SISR</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     BARRE DE NAVIGATION (fixée en haut)
+     - Pour ajouter une page : copie un <a class="nav-item">,
+       change data-page="page-MA-PAGE"
+     - Fait pareil dans le bloc #mobile-menu en dessous
+     ============================================================ -->
+<header class="topnav" id="topnav">
+  <div class="topnav-inner">
+
+    <!-- LOGO — clique renvoie à l'accueil -->
+    <a href="#" class="nav-logo" data-page="page-accueil">
+      <div class="logo-mark">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon
+            points="20,2 36,11 36,29 20,38 4,29 4,11"
+            stroke="url(#g1)"
+            stroke-width="1.5"
+            fill="rgba(0,123,255,0.07)"
+          />
+          <text
+            x="11" y="26"
+            font-family="'Courier New',monospace"
+            font-size="16"
+            font-weight="800"
+            fill="url(#g1)"
+          >L</text>
+          <circle cx="28" cy="13" r="3.5" fill="#2ECC71"/>
+          <defs>
+            <linearGradient id="g1" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#60AAFF"/>
+              <stop offset="100%" stop-color="#2ECC71"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <!-- ✏️ Modifie ton prénom/nom ici -->
+        <span class="logo-name">Lothaire QUINTARD</span>
+        <span class="logo-role">BTS SIO · SISR</span>
+      </div>
+    </a>
+
+    <!-- LIENS NAV DESKTOP -->
+    <nav class="nav-links" id="nav-links">
+      <a href="#" class="nav-item active"   data-page="page-accueil">Accueil</a>
+      <a href="#" class="nav-item"          data-page="page-realisations">Réalisations</a>
+      <a href="#" class="nav-item"          data-page="page-procedures">Procédures</a>
+      <a href="#" class="nav-item"          data-page="page-experiences">Expériences</a>
+      <a href="#" class="nav-item"          data-page="page-competences">Compétences</a>
+      <a href="#" class="nav-item"          data-page="page-certifications">Certifications</a>
+      <a href="#" class="nav-item"          data-page="page-veille">Veille</a>
+      <a href="#" class="nav-item nav-contact" data-page="page-contact">Contact</a>
+    </nav>
+
+    <!-- BADGE "Disponible" — change le texte si besoin -->
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>Disponible</span>
+    </div>
+
+    <!-- BURGER (mobile uniquement) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Barre de progression en bas de la nav -->
+  <div class="nav-progress" id="nav-progress"></div>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#" class="mobile-item" data-page="page-accueil">Accueil</a>
+    <a href="#" class="mobile-item" data-page="page-realisations">Réalisations</a>
+    <a href="#" class="mobile-item" data-page="page-procedures">Procédures</a>
+    <a href="#" class="mobile-item" data-page="page-experiences">Expériences</a>
+    <a href="#" class="mobile-item" data-page="page-competences">Compétences</a>
+    <a href="#" class="mobile-item" data-page="page-certifications">Certifications</a>
+    <a href="#" class="mobile-item" data-page="page-veille">Veille Techno</a>
+    <a href="#" class="mobile-item" data-page="page-contact">Contact</a>
+  </div>
+
+</header><!-- /topnav -->
+
+
+<!-- ============================================================
+     CONTENU PRINCIPAL
+     Chaque <section class="page"> = une page du portfolio
+     id="page-XXX" doit correspondre aux data-page dans la nav
+     ============================================================ -->
+<main class="main">
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 1 — ACCUEIL
+       ══════════════════════════════════════════ -->
+  <section class="page active" id="page-accueil">
+
+    <!-- HERO — présentation principale -->
+    <div class="hero">
+      <div>
+        <!-- ✏️ Modifie le texte d'intro ici -->
+        <span class="hero-greeting">// Bonjour, je suis</span>
+        <h1 class="hero-name">Lothaire<span> QUINTARD</span></h1>
+        <p class="hero-role">Étudiant BTS SIO · Option SISR</p>
+        <p class="hero-bio">
+          Je suis actuellement en 2ème année de BTS SIO option SISR à CaenSup Sainte-Ursule (Caen).
+          Titulaire d'un BAC STI2D option SIN, je construis mes compétences à travers des stages,
+          des projets personnels et une pratique régulière du CTF sur TryHackMe.
+          Je suis en recherche d'alternance pour une Licence STS.
+        </p>
+
+        <!-- Badge de disponibilité -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Disponible — Recherche alternance Licence STS
+        </div>
+
+        <!-- Boutons d'action -->
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="btn-contact">
+            <svg style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Me contacter
+          </button>
+          <!-- ✏️ Le fichier CV est dans assets/cv-lothaire.pdf -->
+          <button class="btn btn-outline" id="cv-download">
+            <svg style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger CV
+          </button>
+        </div>
+      </div>
+
+      <!-- ✏️ Remplace assets/img/photo.jpg par ta photo -->
+      <div class="hero-avatar" id="hero-avatar">
+        <img src="assets/img/photo.jpg" alt="Photo de Lothaire" />
+      </div>
+    </div><!-- /hero -->
+
+    <!-- GRILLE D'INFOS RAPIDES -->
+    <div class="info-grid">
+
+      <!-- ✏️ Modifie chaque info-item selon ta situation -->
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">Localisation</div>
+          <div class="info-value">Caen, Normandie</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">Formation</div>
+          <div class="info-value">BTS SIO SISR — 2ème année</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">École</div>
+          <div class="info-value">CaenSup Sainte-Ursule</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <rect x="1" y="3" width="15" height="13" rx="1"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5"  cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">Mobilité</div>
+          <div class="info-value">Permis B + Véhicule</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">Anglais</div>
+          <div class="info-value">TOEIC — Niveau B2</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <svg style="width:18px;height:18px;stroke:#007BFF;fill:none;stroke-width:1.8;stroke-linecap:round" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-label">Spécialité</div>
+          <div class="info-value">Réseau · Systèmes · Sécu</div>
+        </div>
+      </div>
+
+    </div><!-- /info-grid -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <div></div><!-- vide à gauche car c'est la première page -->
+      <button class="page-nav-btn next" data-target="page-realisations">
+        Réalisations
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-accueil -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 2 — RÉALISATIONS
+       ✏️ Pour ajouter un projet : copie un bloc
+          <div class="project-card"> et adapte-le
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-realisations">
+
+    <div class="page-header">
+      <span class="page-tag">02 · réalisations</span>
+      <h1 class="page-title">Projets & Réalisations</h1>
+      <p class="page-subtitle">Projets réalisés en classe, en entreprise et à titre personnel.</p>
+    </div>
+
+
+    <!-- Projets en entreprise -->
+    <h2 class="section-title">🏢 En entreprise</h2>
+    <div class="card-grid" style="margin-bottom:40px;">
+
+      <div class="project-card">
+        <div class="project-context">Stage · Riou Glass</div>
+        <div class="project-title">Étude comparative — Solutions de Patch Management</div>
+        <div class="project-desc">
+          Analyse des besoins de l'entreprise, rédaction d'un cahier des charges,
+          comparaison de solutions (WSUS, Ivanti, etc.), réalisation de POC
+          et présentation hebdomadaire des résultats à l'équipe.
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">Patch Management</span>
+          <span class="tag tag-gray">POC</span>
+          <span class="tag tag-gray">Cahier des charges</span>
+          <span class="tag tag-orange">Gestion de projet</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-context">Stage · CCI du Havre</div>
+        <div class="project-title">Inventaire du parc informatique</div>
+        <div class="project-desc">
+          Étiquetage et recensement complet du matériel informatique
+          (postes, switchs, périphériques). Mise à jour de la base de données
+          du parc et aide à la documentation de l'infrastructure.
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">Inventaire</span>
+          <span class="tag tag-gray">Support N1</span>
+          <span class="tag tag-gray">Infrastructure</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-context">Stage · CCI du Havre</div>
+        <div class="project-title">Configuration d'équipements réseau</div>
+        <div class="project-desc">
+          Assistance à l'installation et remplacement de matériels réseau.
+          Configuration de base de switches et participation à la maintenance
+          de l'infrastructure réseau.
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">Cisco</span>
+          <span class="tag tag-gray">Réseau</span>
+          <span class="tag tag-gray">Switch</span>
+        </div>
+      </div>
+
+    </div><!-- /card-grid entreprise -->
+
+    <!-- Projets scolaires -->
+    <h2 class="section-title">🎓 En classe</h2>
+    <div class="card-grid" style="margin-bottom:40px;">
+
+      <div class="project-card">
+        <div class="project-context">TP · Classe</div>
+        <div class="project-title">Création d'un NAS depuis un serveur physique</div>
+        <div class="project-desc">
+          Mise en place d'un serveur NAS à partir d'un serveur physique récupéré.
+          Configuration du système de fichiers, des partages réseau et de la gestion des accès utilisateurs.
+        </div>
+        <!-- Tags centrés -->
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">Linux</span>
+          <span class="tag tag-gray">NAS</span>
+          <span class="tag tag-gray">Serveur physique</span>
+          <span class="tag tag-green">Administration</span>
+        </div>
+      </div>
+
+    </div><!-- /card-grid classe -->
+
+
+
+
+    <!-- Projets personnels -->
+    <h2 class="section-title">🏠 Projets personnels</h2>
+    <div class="card-grid">
+
+      <div class="project-card">
+        <div class="project-context">Personnel · Home Lab</div>
+        <div class="project-title">Serveur multimédia maison</div>
+        <div class="project-desc">
+          Déploiement d'un serveur multimédia personnel (type Plex/Jellyfin)
+          sur machine dédiée. Gestion du stockage, des flux réseau et de l'accès à distance.
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">Linux</span>
+          <span class="tag tag-gray">Jellyfin / Plex</span>
+          <span class="tag tag-green">Home Lab</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-context">Personnel · Home Lab</div>
+        <div class="project-title">Serveur NAS de stockage photos</div>
+        <div class="project-desc">
+          Mise en place d'un NAS personnel pour la sauvegarde et le partage
+          de photos en réseau local. Configuration des droits d'accès et
+          de la synchronisation automatique.
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-blue">NAS</span>
+          <span class="tag tag-gray">Stockage</span>
+          <span class="tag tag-gray">Réseau local</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-context">Personnel · Cybersécurité</div>
+        <div class="project-title">CTF — TryHackMe</div>
+        <div class="project-desc">
+          Participation régulière à des challenges CTF sur TryHackMe.
+          Identification de vulnérabilités réseau et système en environnements contrôlés,
+          utilisation d'outils (Nmap, Metasploit, Burp Suite...).
+        </div>
+        <div class="tags-row tags-center">
+          <span class="tag tag-orange">CTF</span>
+          <span class="tag tag-blue">TryHackMe</span>
+          <span class="tag tag-gray">Pentest</span>
+          <span class="tag tag-gray">Kali Linux</span>
+        </div>
+      </div>
+
+    </div><!-- /card-grid personnel -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-accueil">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Accueil
+      </button>
+      <button class="page-nav-btn next" data-target="page-procedures">
+        Procédures
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-realisations -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 3 — PROCÉDURES
+       ✏️ Pour ajouter une procédure : copie un
+          <div class="procedure-card"> et change
+          le numéro, le titre et la description
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-procedures">
+
+    <div class="page-header">
+      <span class="page-tag">03 · procédures</span>
+      <h1 class="page-title">Documentation Technique</h1>
+      <p class="page-subtitle">Procédures rédigées lors des stages, TP et projets personnels.</p>
+    </div>
+
+    <!-- ✏️ Remplace le chemin du PDF dans assets/js/main.js -->
+    <div class="info-tip">
+      💡 Astuce : Ajoute tes procédures en PDF dans <code>assets/pdf/</code>
+      et mets à jour les liens ci-dessous.
+    </div>
+
+    <!-- Réseau -->
+    <h2 class="section-title">🌐 Réseau & Infrastructure</h2>
+    <div style="margin-bottom:32px;">
+
+      <div class="procedure-card">
+        <div class="proc-num">01</div>
+        <div class="proc-content">
+          <div class="proc-title">Configuration de VLANs — Switches Cisco & HPE Aruba</div>
+          <div class="proc-desc">Segmentation réseau, création et assignation de VLANs, configuration des ports trunk et access.</div>
+        </div>
+          
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+      <div class="procedure-card">
+        <div class="proc-num">02</div>
+        <div class="proc-content">
+          <div class="proc-title">Configuration du routage statique et dynamique — Routeurs Cisco</div>
+          <div class="proc-desc">Mise en place du routage inter-VLAN, routes statiques, protocoles RIP/OSPF.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedurerip" >Télécharger</button></div>
+      </div>
+
+      <div class="procedure-card">
+        <div class="proc-num">03</div>
+        <div class="proc-content">
+          <div class="proc-title">Installation et configuration d'un serveur DHCP</div>
+          <div class="proc-desc">Déploiement du service DHCP sous Windows Server / Linux, plages d'adresses, réservations.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+      <div class="procedure-card">
+        <div class="proc-num">04</div>
+        <div class="proc-content">
+          <div class="proc-title">Mise en place d'un serveur DNS</div>
+          <div class="proc-desc">Configuration d'un serveur DNS autoritaire, zones directes et inverses, enregistrements A/CNAME/MX.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+    </div><!-- /réseau -->
+
+    <!-- Systèmes -->
+    <h2 class="section-title">🖥️ Systèmes</h2>
+    <div style="margin-bottom:32px;">
+
+      <div class="procedure-card">
+        <div class="proc-num">05</div>
+        <div class="proc-content">
+          <div class="proc-title">Installation et configuration Active Directory — Windows Server 2022</div>
+          <div class="proc-desc">Création du domaine, GPO, gestion des utilisateurs et des groupes, jonction de machines.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+      <div class="procedure-card">
+        <div class="proc-num">06</div>
+        <div class="proc-content">
+          <div class="proc-title">Déploiement d'un serveur Apache sous Linux</div>
+          <div class="proc-desc">Installation, configuration des virtual hosts, sécurisation HTTPS avec certificat auto-signé.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+      <div class="procedure-card">
+        <div class="proc-num">07</div>
+        <div class="proc-content">
+          <div class="proc-title">Création d'un NAS depuis un serveur physique</div>
+          <div class="proc-desc">Partitionnement, configuration RAID logiciel, partages SMB/NFS, gestion des droits.</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+    </div><!-- /systèmes -->
+
+    <!-- Sécurité -->
+    <h2 class="section-title">🔒 Sécurité & Projet</h2>
+    <div>
+
+      <div class="procedure-card">
+        <div class="proc-num">08</div>
+        <div class="proc-content">
+          <div class="proc-title">Analyse comparative de solutions de Patch Management</div>
+          <div class="proc-desc">Méthodologie d'analyse, critères de sélection, rédaction du cahier des charges et rapport de POC (Riou Glass).</div>
+        </div>
+        <div class="proc-tag"><button class="btn btn-primary" id="btn-procedure">Télécharger</button></div>
+      </div>
+
+    </div><!-- /sécurité -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-realisations">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Réalisations
+      </button>
+      <button class="page-nav-btn next" data-target="page-experiences">
+        Expériences
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-procedures -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 4 — EXPÉRIENCES
+       ✏️ Pour ajouter une expérience : copie un
+          <div class="timeline-item"> et adapte
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-experiences">
+
+    <div class="page-header">
+      <span class="page-tag">04 · expériences</span>
+      <h1 class="page-title">Expériences Professionnelles</h1>
+      <p class="page-subtitle">Stages, emplois et apprentissages en entreprise.</p>
+    </div>
+
+    <h2 class="section-title">💼 Parcours professionnel</h2>
+    <div class="timeline">
+
+      <!-- Expérience 1 -->
+      <div class="timeline-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Riou Glass</div>
+            <div class="exp-role">Stagiaire — Administration Systèmes & Réseaux</div>
+          </div>
+          <span class="exp-date">Déc. 2025 – Fév. 2026</span>
+        </div>
+        <ul class="exp-list">
+          <li>Analyse des besoins de l'entreprise en matière de patch management.</li>
+          <li>Rédaction d'un cahier des charges et réalisation d'une analyse comparative de solutions.</li>
+          <li>Mise en place de tests et de POC afin de valider les choix techniques.</li>
+          <li>Présentation hebdomadaire des avancées et résultats à l'équipe.</li>
+          <li>Échanges techniques avec des fournisseurs et partenaires potentiels.</li>
+          <li>Documentation des configurations et procédures pour assurer la reproductibilité.</li>
+        </ul>
+        <div class="tags-row">
+          <span class="tag tag-blue">Patch Management</span>
+          <span class="tag tag-gray">POC</span>
+          <span class="tag tag-orange">Gestion de projet</span>
+          <span class="tag tag-gray">Documentation</span>
+        </div>
+      </div>
+
+      <!-- Expérience 2 -->
+      <div class="timeline-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">CCI du Havre</div>
+            <div class="exp-role">Stagiaire — Support, Systèmes & Réseaux</div>
+          </div>
+          <span class="exp-date">Mai – Juin 2025</span>
+        </div>
+        <ul class="exp-list">
+          <li>Participation à la maintenance et à l'exploitation de l'infrastructure informatique.</li>
+          <li>Assistance à l'installation et au remplacement de matériels réseau et postes utilisateurs.</li>
+          <li>Surveillance du bon fonctionnement des équipements et des services.</li>
+          <li>Support utilisateurs de premier niveau (diagnostic et résolution d'incidents).</li>
+          <li>Étiquetage et inventaire complet du parc informatique.</li>
+        </ul>
+        <div class="tags-row">
+          <span class="tag tag-blue">Support N1</span>
+          <span class="tag tag-gray">Infrastructure</span>
+          <span class="tag tag-gray">Inventaire</span>
+          <span class="tag tag-gray">Réseau</span>
+        </div>
+      </div>
+
+      <!-- Expérience 3 (hors IT — classe "secondary" = point gris sur la timeline) -->
+      <div class="timeline-item secondary">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Groupe SEB — Home and Cook</div>
+            <div class="exp-role">Vendeur Polyvalent (Tefal, Moulinex, Rowenta)</div>
+          </div>
+          <span class="exp-date">Juin – Août 2025 · Oct – Nov 2025</span>
+        </div>
+        <ul class="exp-list">
+          <li>Accueil et conseil clients sur les produits (Tefal, Moulinex, Rowenta).</li>
+          <li>Développement du sens du service client et de la gestion du stress en forte affluence.</li>
+          <li>Organisation et gestion du rayon, réapprovisionnement.</li>
+        </ul>
+        <div class="tags-row">
+          <span class="tag tag-gray">Service client</span>
+          <span class="tag tag-gray">Travail en équipe</span>
+          <span class="tag tag-gray">Organisation</span>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+
+    <h2 class="section-title" style="margin-top:48px;">🎓 Formation</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">CaenSup Sainte-Ursule — Caen</div>
+            <div class="exp-role">BTS SIO — Option SISR (en cours)</div>
+          </div>
+          <span class="exp-date">2024 – 2026</span>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-secondary);margin-top:8px;">
+          Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux.
+          Attestation e-sensibilisation (cybermalveillance.gouv) et SecNum Académie (ANSSI).
+        </p>
+      </div>
+
+      <div class="timeline-item secondary">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Lycée Jacques Prévert — Pont-Audemer</div>
+            <div class="exp-role">BAC STI2D — Option SIN, Mention Assez Bien</div>
+          </div>
+          <span class="exp-date">2021 – 2024</span>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-secondary);margin-top:8px;">
+          Sciences et Technologies de l'Industrie et du Développement Durable,
+          option Systèmes d'Information et Numérique.
+        </p>
+      </div>
+
+    </div><!-- /timeline formation -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-procedures">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Procédures
+      </button>
+      <button class="page-nav-btn next" data-target="page-competences">
+        Compétences
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-experiences -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 5 — COMPÉTENCES
+       ✏️ Pour modifier le niveau d'une compétence,
+          change data-width="XX" (0 à 100)
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-competences">
+
+    <div class="page-header">
+      <span class="page-tag">05 · compétences</span>
+      <h1 class="page-title">Grille de Compétences</h1>
+      <p class="page-subtitle">Compétences techniques et transversales acquises en formation et en entreprise.</p>
+    </div>
+
+    <!-- Grille 2 colonnes (responsive) -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+      <!-- Groupe : Réseau -->
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <div class="skill-group-icon">🌐</div>
+          Administration Réseau
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Cisco IOS (Switches / Routeurs)</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="65" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">HPE Aruba — VLANs</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="60" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">TCP/IP · ARP · FTP</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="70" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">DHCP · DNS · HTTP/S · SSH</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="65" style="width:0"></div>
+          </div>
+        </div>
+      </div><!-- /réseau -->
+
+      <!-- Groupe : Systèmes -->
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <div class="skill-group-icon">🖥️</div>
+          Systèmes & Services
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Windows Server 2022 / AD</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="65" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Linux (Ubuntu / Debian)</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="60" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Apache (serveur web)</span>
+            <span class="skill-level-text">Débutant+</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="45" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">NAS — Stockage & Partage</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="60" style="width:0"></div>
+          </div>
+        </div>
+      </div><!-- /systèmes -->
+
+      <!-- Groupe : Cybersécurité -->
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <div class="skill-group-icon">🔒</div>
+          Cybersécurité (en apprentissage)
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">CTF — TryHackMe</span>
+            <span class="skill-level-text">Débutant+</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="40" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Kali Linux · Outils de scan</span>
+            <span class="skill-level-text">Débutant+</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="40" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Identification de vulnérabilités</span>
+            <span class="skill-level-text">Débutant</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="30" style="width:0"></div>
+          </div>
+        </div>
+      </div><!-- /cybersécurité -->
+
+      <!-- Groupe : Gestion de projet -->
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <div class="skill-group-icon">📋</div>
+          Gestion de projet & Outils
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Rédaction cahiers des charges</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="65" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Tests · POC · Analyse comparative</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="60" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Pack Microsoft Office + Teams</span>
+            <span class="skill-level-text">Avancé</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="80" style="width:0"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">Documentation technique</span>
+            <span class="skill-level-text">Intermédiaire</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="70" style="width:0"></div>
+          </div>
+        </div>
+      </div><!-- /gestion de projet -->
+
+    </div><!-- /grille compétences -->
+
+    <!-- Légende des niveaux -->
+    <div class="skill-legend">
+      <span style="color:var(--text-muted)">Légende :</span>
+      <span style="color:#5DDFA0">■ 75–100% Avancé</span>
+      <span style="color:#60AAFF">■ 50–75% Intermédiaire</span>
+      <span style="color:#FFB84D">■ 25–50% Débutant+</span>
+      <span style="color:var(--text-muted)">■ 0–25% Notions</span>
+    </div>
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-experiences">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Expériences
+      </button>
+      <button class="page-nav-btn next" data-target="page-certifications">
+        Certifications
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-competences -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 6 — CERTIFICATIONS
+       ✏️ Pour ajouter une certif : copie un
+          <div class="cert-card"> et adapte-le
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-certifications">
+
+    <div class="page-header">
+      <span class="page-tag">06 · certifications</span>
+      <h1 class="page-title">Diplômes & Certifications</h1>
+      <p class="page-subtitle">Titres, certifications et attestations obtenus.</p>
+    </div>
+
+    <h2 class="section-title">🏅 Certifications</h2>
+    <div class="cert-grid" style="margin-bottom:40px;">
+
+      <div class="cert-card">
+        <div class="cert-icon">🛡️</div>
+        <div>
+          <div class="cert-name">SecNumAcadémie</div>
+          <div class="cert-issuer">ANSSI</div>
+        </div>
+        <div class="cert-date">Attestation de suivi</div>
+        <span class="tag tag-green">Obtenu</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">💻</div>
+        <div>
+          <div class="cert-name">Pix</div>
+          <div class="cert-issuer">GIP Pix</div>
+        </div>
+        <div class="cert-date">Certification compétences numériques</div>
+        <span class="tag tag-green">Obtenu</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🌐</div>
+        <div>
+          <div class="cert-name">TOEIC</div>
+          <div class="cert-issuer">ETS Global</div>
+        </div>
+        <div class="cert-date">Niveau B2 — Anglais</div>
+        <span class="tag tag-blue">B2</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">⚠️</div>
+        <div>
+          <div class="cert-name">E-sensibilisation cybermalveillance</div>
+          <div class="cert-issuer">cybermalveillance.gouv.fr</div>
+        </div>
+        <div class="cert-date">Attestation de suivi</div>
+        <span class="tag tag-green">Obtenu</span>
+      </div>
+
+    </div><!-- /cert-grid certifications -->
+
+    <h2 class="section-title">🎓 Diplômes</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div>
+          <div class="cert-name">BTS SIO — Option SISR</div>
+          <div class="cert-issuer">CaenSup Sainte-Ursule</div>
+        </div>
+        <div class="cert-date">2024 – 2026 · En cours</div>
+        <span class="tag tag-orange">En cours</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🏫</div>
+        <div>
+          <div class="cert-name">BAC STI2D — Option SIN</div>
+          <div class="cert-issuer">Lycée Jacques Prévert, Pont-Audemer</div>
+        </div>
+        <div class="cert-date">2024 · Mention Assez Bien</div>
+        <span class="tag tag-green">Obtenu</span>
+      </div>
+
+    </div><!-- /cert-grid diplômes -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-competences">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Compétences
+      </button>
+      <button class="page-nav-btn next" data-target="page-veille">
+        Veille Techno
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-certifications -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 7 — VEILLE TECHNOLOGIQUE
+       ✏️ L'URL du site de veille est à changer
+          dans assets/js/main.js (cherche "veille-link")
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-veille">
+
+    <div class="page-header">
+      <span class="page-tag">07 · veille techno</span>
+      <h1 class="page-title">Veille Technologique</h1>
+      <p class="page-subtitle">Suivi de l'actualité IT, réseaux et cybersécurité.</p>
+    </div>
+
+    <!-- Carte lien vers le site de veille -->
+    <div class="veille-link-card">
+      <div class="veille-icon-big">🔍</div>
+      <h2 style="font-family:var(--font-title);font-size:20px;font-weight:600;color:var(--text-primary);">
+        Accéder à mon site de veille
+      </h2>
+      <p style="font-size:14px;color:var(--text-secondary);max-width:320px;">
+        Retrouve mes articles, synthèses et ressources sur mon site dédié à la veille technologique.
+      </p>
+      <button class="btn btn-primary" id="veille-link">
+        <svg style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round" viewBox="0 0 24 24">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Ouvrir le site de veille
+      </button>
+      <!-- ✏️ Remplace l'URL dans main.js -->
+      <p style="font-size:11px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;">
+        ✏️ Remplace l'URL dans <code>assets/js/main.js</code>
+      </p>
+    </div>
+
+    <h2 class="section-title" style="margin-top:8px;">📡 Mes sources</h2>
+    <div class="veille-sources">
+
+      <div class="veille-source">
+        <div class="veille-source-icon">🖥️</div>
+        <div>
+          <div class="veille-source-name">IT-Connect</div>
+          <div class="veille-source-type">Forum & Articles FR</div>
+        </div>
+      </div>
+
+      <div class="veille-source">
+        <div class="veille-source-icon">📡</div>
+        <div>
+          <div class="veille-source-name">Flux RSS</div>
+          <div class="veille-source-type">Agrégation automatique</div>
+        </div>
+      </div>
+
+      <div class="veille-source">
+        <div class="veille-source-icon">▶️</div>
+        <div>
+          <div class="veille-source-name">YouTube</div>
+          <div class="veille-source-type">Vidéos IT / Tutos / Actu</div>
+        </div>
+      </div>
+
+      <div class="veille-source">
+        <div class="veille-source-icon">🎯</div>
+        <div>
+          <div class="veille-source-name">TryHackMe</div>
+          <div class="veille-source-type">CTF & Sécurité pratique</div>
+        </div>
+      </div>
+
+    </div><!-- /veille-sources -->
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-certifications">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Certifications
+      </button>
+      <button class="page-nav-btn next" data-target="page-contact">
+        Contact
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section><!-- /page-veille -->
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE 8 — CONTACT
+       ✏️ Mets à jour ton email, LinkedIn et GitHub
+       ══════════════════════════════════════════ -->
+  <section class="page" id="page-contact">
+
+    <div class="page-header">
+      <span class="page-tag">08 · contact</span>
+      <h1 class="page-title">Me Contacter</h1>
+      <p class="page-subtitle">Pour toute opportunité d'alternance, stage ou échange professionnel.</p>
+    </div>
+
+    <h2 class="section-title">📬 Coordonnées</h2>
+    <div class="contact-grid" style="margin-bottom:40px;">
+
+      <!-- ✏️ Remplace l'adresse email -->
+      <a href="mailto:ton.email@example.com" class="contact-card">
+        <div class="contact-icon" style="background:rgba(0,123,255,0.12);">✉️</div>
+        <div>
+          <div class="contact-label">Email professionnel</div>
+          <div class="contact-value">ton.email@example.com</div>
+        </div>
+      </a>
+
+      <!-- ✏️ Remplace l'URL LinkedIn -->
+      <a href="https://www.linkedin.com/in/lothaire-quintard-62834933b/" target="_blank" class="contact-card">
+        <div class="contact-icon" style="background:rgba(0,119,181,0.15);">💼</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/lothaire</div>
+        </div>
+      </a>
+
+      <!-- ✏️ Remplace l'URL GitHub -->
+      <a href="https://github.com/lothaire" target="_blank" class="contact-card">
+        <div class="contact-icon" style="background:rgba(255,255,255,0.06);">🐙</div>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">github.com/lothaire</div>
+        </div>
+      </a>
+
+    </div><!-- /contact-grid -->
+
+    <!-- Bloc téléchargement CV -->
+    <div class="cv-cta">
+      <div style="font-size:40px">📄</div>
+      <div class="cv-cta-title">Télécharger mon CV</div>
+      <div class="cv-cta-sub">Disponible en PDF — Mis à jour en 2025</div>
+      <button class="btn btn-green" id="cv-download-contact">
+        <svg style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round" viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Télécharger le CV (PDF)
+      </button>
+    </div>
+
+    <!-- Navigation bas de page -->
+    <div class="page-nav-bar">
+      <button class="page-nav-btn prev" data-target="page-veille">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Veille Techno
+      </button>
+      <button class="page-nav-btn next" data-target="page-accueil">
+        Retour accueil
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+      © <span id="footer-year"></span> Lothaire QUINTARD — Portfolio BTS SIO SISR
+    </footer>
+
+  </section><!-- /page-contact -->
+
+
+</main><!-- /main -->
+
+<!-- ✏️ Chemin vers le JS principal -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
